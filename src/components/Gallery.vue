@@ -1,193 +1,118 @@
 <template>
 
-    <div class="galleria">
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 7.jpg"
-          alt="Immagine della galleria 1"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 2.jpg"
-          alt="Immagine della galleria 2"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 3.jpg"
-          alt="Immagine della galleria 3"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 4.jpg"
-          alt="Immagine della galleria 4"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 5.jpg"
-          alt="Immagine della galleria 5"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 6.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 8.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 9.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 10.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 11.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 12.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 13.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 14.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 15.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 16.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 17.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 18.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 19.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-      <figure class="galleria__elemento ">
-        <img
-          src="../media/galleria 20.jpg"
-          alt="Immagine della galleria 6"
-          class="galleria__immagine"
-        />
-      </figure>
-    
-    </div>
-    
-    </template>
-    
-    <style scoped>
-    
-    .galleria {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 colonne */
-        grid-template-rows: repeat(4, 20vw); /* 4 righe con altezza del 20% della viewport */
-        grid-gap: 20px;
-        row-gap: 60px;
-    }
-    
-    .image-container {
-        overflow: hidden;
-        border-radius: 10px;
+  <section class="container">
+    <div class="card-grid">
+  
+      <a class="card"  href="#">
+        <div class="background" :style="{ backgroundImage: 'url(/media/impro1.jpeg)' }"></div>
         
-    }
-    
-    .image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-    
-    
-    @media (max-width: 768px) {
-      .galleria {
-        grid-template-columns: repeat(2, 1fr); /* 2 colonne su schermi medi */
-        grid-template-rows: repeat(8, 25vw); /* 8 righe con altezza del 25% della viewport */
-        row-gap: 80px;
-        max-height: 70vh;
-        overflow-y: auto;
-      }
-    }
-    </style>
+      </a>
+  
+      <a class="card" href="#">
+        <div class="background" :style="{ backgroundImage: 'url(/media/impro2.jpeg)' }"></div>
+      
+      </a>
+  
+      <a class="card" href="#">
+        <div class="background" :style="{ backgroundImage: 'url(/media/impro3.jpeg)' }"></div>
+        
+      </a>
+  
+      <a class="card" href="#">
+        <div class="background" :style="{ backgroundImage: 'url(/media/impro4.jpeg)' }"></div>
+       
+      </a>
+  
+    </div>
+  </section>
+  
+  </template>
+
+<style scoped>
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100%;
+  font-family: sans-serif;
+  
+}
+
+.container{
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: 64px 24px;
+  
+}
+
+.card-grid{
+  display: grid;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+  
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.card{
+  position: relative;
+  
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.background{
+  background-position: center;
+  background-size: cover;
+  
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) 
+          contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .background{
+  transform: scale(1.05);
+  filter: none;
+}
+
+.card-grid:hover > .card:not(:hover) .background{
+  filter: brightness(0.6) saturate(1)
+          contrast(1.2)   blur(5px);
+}
+
+.card-grid:hover > .card:not(:hover) .content{
+  filter: brightness(0.8) blur(2px);
+}
+
+</style>
