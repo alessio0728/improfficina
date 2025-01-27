@@ -11,7 +11,7 @@ let tab = ref(0);
 
 <template>
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-dark bg-dark ">
     <div class="container-fluid"> 
       <a @click="tab=0" class="navbar-brand" href="#"><span class="title">IMPROFFICINA</span> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
