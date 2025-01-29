@@ -1,32 +1,30 @@
 <template>
-  <div class="flex flex-col items-center justify-center h-screen">
-    <div class="mb-8">
-      <img class="degustazione" src="../media/degustazione31102024.jpg" alt="degustazione" width="500px" />
+  <div class="flex flex-col items-center justify-center min-h-screen p-4">
+    <!-- Immagine con meno spazio sopra -->
+    <div class="mb-4 mt-[-20px]">
+      <a target="_blank"
+        href="https://www.eventbrite.it/e/biglietti-improlimpiadi-spettacolo-di-improvvisazione-teatrale-1221939005459?aff=oddtdtcreator&fbclid=IwY2xjawIHEW1leHRuA2FlbQIxMAABHbbpryupwnABUDHDGxfQjaybOv49BwqWsUffXRu9a2_avrZJAusbtRjKZw_aem_EVTVGhhgeom8AYvMMOYhAw">
+        <img class="degustazione w-[300px] sm:w-[400px] md:w-[500px] lg:w-[60%] xl:w-[65%] mx-auto"
+          src="/public/media/calendarioFebbraio2025.png" alt="degustazione" />
+      </a>
     </div>
-    
-    <div class="grid auto-cols-max grid-flow-col gap-5 text-center mb-8">
-      <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-        <span class="countdown font-mono text-5xl">
-          {{ days }}
-        </span>
+
+    <!-- Countdown -->
+    <div class="grid grid-cols-2 md:grid-flow-col gap-5 text-center mb-8">
+      <div class="countdown-box">
+        <span class="countdown">{{ days }}</span>
         <span class="time">GIORNI</span>
       </div>
-      <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-        <span class="countdown font-mono text-5xl">
-          {{ hours }}
-        </span>
+      <div class="countdown-box">
+        <span class="countdown">{{ hours }}</span>
         <span class="time">ORE</span>
       </div>
-      <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-        <span class="countdown font-mono text-5xl">
-          {{ minutes }}
-        </span>
+      <div class="countdown-box">
+        <span class="countdown">{{ minutes }}</span>
         <span class="time">MINUTI</span>
       </div>
-      <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-        <span class="countdown font-mono text-5xl">
-          {{ seconds }}
-        </span>
+      <div class="countdown-box">
+        <span class="countdown">{{ seconds }}</span>
         <span class="time">SECONDI</span>
       </div>
     </div>
@@ -52,7 +50,7 @@ export default {
   },
   methods: {
     startCountdown() {
-      const targetDate = new Date('2025-01-18T20:30:00Z'); // Data corretta
+      const targetDate = new Date('2025-02-01T20:30:00Z');
       this.countdownInterval = setInterval(() => {
         const now = new Date();
         const diff = targetDate - now;
@@ -63,7 +61,7 @@ export default {
           this.hours = 0;
           this.minutes = 0;
           this.seconds = 0;
-          alert('Evento finito ci vediamo alla prossima con nuovi vini!');
+          alert('Evento finito! Ci vediamo alla prossima con nuovi vini!');
           return;
         }
 
@@ -78,24 +76,30 @@ export default {
 </script>
 
 <style scoped>
+
+a{
+  cursor: pointer;
+}
 .countdown {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  font-weight: bold;
   text-align: center;
   color: white;
 }
 
-.grid.auto-cols-max.grid-flow-col.gap-5.text-center.mb-8 {
-  margin-bottom: 250px;
-}
-
-.bg-neutral {
+.countdown-box {
   background-color: #2d3748;
   border-radius: 0.5rem;
-  padding: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.time{
+.time {
   color: white;
-  
+  font-size: 1rem;
+  margin-top: 5px;
 }
 </style>

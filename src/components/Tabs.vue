@@ -36,7 +36,7 @@ let tab = ref(0);
   </nav>
 
   <!-- Contenuto -->
-  <div class="py-10 px-6">
+  <div class="py-4 px-6">
     <div v-if="tab === 0">
       <Home />
     </div>
