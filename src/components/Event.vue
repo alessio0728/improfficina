@@ -61,7 +61,7 @@ export default {
           this.hours = 0;
           this.minutes = 0;
           this.seconds = 0;
-          alert('Evento finito! Ci vediamo alla prossima con nuovi vini!');
+          alert('Evento finito! Ci vediamo alla prossima improvvisazione!');
           return;
         }
 
