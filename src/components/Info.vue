@@ -12,7 +12,7 @@
                 <ul class="example-2">
                     <li class="icon-content">
                         <a data-social="whatsapp" aria-label="Whatsapp" target="_blank"
-                            href="https://api.whatsapp.com/send?phone=+112067101079&amp;text=Save%20this%20to%20your%20Favorites%20-%20@wilsondesouza">
+                            href="https://chat.whatsapp.com/GNaJxEP8Wbd1GMYRMHXJgn">
                             <div class="filled"></div>
                             <svg xml:space="preserve" viewBox="0 0 24 24" class="bi bi-whatsapp" fill="currentColor"
                                 height="24" width="24" xmlns="http://www.w3.org/2000/svg">
